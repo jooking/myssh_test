@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.soundphoto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <!--添加权限：照相  -->
+     <uses-permission android:name="android.permission.CAMERA" /><!-- 如果通过Intent调用Carema不需要此权限 -->
+ <uses-feature android:name="android.hardware.camera" />
+ <uses-feature android:name="android.hardware.camera.autofocus" />
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+ <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+<uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
+
+ 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+       android:theme="@style/CustomActionBarTheme" >
+        <activity
+            android:name="com.example.soundphoto.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".NextActivity"
+            android:label="@string/app_next" 
+            ></activity>
+        <activity 
+            android:name=".camera.CameraActivity"
+            android:label="@string/app_next"
+             android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" 
+            ></activity>
+    </application>
+
+</manifest>

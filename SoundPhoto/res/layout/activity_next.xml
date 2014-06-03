@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button 
+            android:id="@+id/record_start"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:text="开始录音"
+        	android:layout_weight="1"
+        		android:textColor="@android:color/holo_blue_light"
+        	style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        	android:onClick="onStartRecordingClick"/>
+       <!--   <Button 
+             android:id="@+id/record_stop"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:text="停止录音"
+        	android:textColor="@android:color/holo_blue_light"
+        	style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        	android:onClick="onStopRecordingClick"/> -->
+        
+    </LinearLayout>
+     <Button 
+            android:id="@+id/record_start"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="照相"        	
+        		android:textColor="@android:color/holo_blue_light"
+        	style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        	android:onClick="onCapturePicClick"/>
+     
+          <Button 
+            android:id="@+id/my_email"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="邮箱"        	
+        		android:textColor="@android:color/holo_blue_light"
+        	style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        	android:onClick="onEmailClick"/>
+
+</LinearLayout>
